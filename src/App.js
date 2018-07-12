@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   handleCreate = (data) => {
-    const { information } = this.state;
+    const { information } = this.state; 
     this.setState({
       information: information.concat({
         id: this.id++,

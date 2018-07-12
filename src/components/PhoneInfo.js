@@ -29,7 +29,7 @@ class PhoneInfo extends Component {
     handleRemove = () => {
         // 삭제 버튼이 클릭되면 onRemove 에 id 넣어서 호출 
         const { info, onRemove } = this.props;
-            (info.id);
+        onRemove(info.id);
     }
 
     // editing 값을 반전시키는 함수입니다
@@ -74,7 +74,7 @@ class PhoneInfo extends Component {
 
     // 실제로 바뀌지 않는 컴포넌트들은 DOM 변화가 일어나지는 않겠지만, 
     // Virtual DOM 에 그리는 자원도 아껴주기 위해서 
-    // 우리는 shouldComponentUpdate 를 통하여 최적화
+    //우리는 shouldComponentUpdate 를 통하여 최적화
     shouldComponentUpdate(nextProps, nextState) {
         // 수정 상태가 아니고, info 값이 같다면 리렌더링 안함
         if (!this.state.editing
